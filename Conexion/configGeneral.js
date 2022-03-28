@@ -5,6 +5,6 @@ const config = {
   password : 'mysql',
   database : 'ecommerce'
 };
-const server = 1080;
+const servidor = 3000;
 const pool = mysql.createPool(config);
 module.exports = pool,server;
