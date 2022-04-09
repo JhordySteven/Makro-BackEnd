@@ -29,7 +29,7 @@ app.use(menu);
 app.use(foto);
 
 //creación del server
-app.listen(server.servidor,function(error,res){
+app.listen(2050,function(error,res){
 	if(error) throw error;
 	else console.log("servidor corriendo perfectamente");
 });

@@ -13,6 +13,6 @@ router.put('/api/activateMenu',menuController.mntMenu);
 //lista Maestro TipoMenu
 //router.get('/api/listTipoMenu/:opcionId',menuController.listTipoMenu);
 //litsar Menu
-router.get('/api/listarMenu/:opcion/:estado',menuController.listMenu);
+router.get('/api/listarMenu/:opcion',menuController.listMenu);
 
 module.exports=router;

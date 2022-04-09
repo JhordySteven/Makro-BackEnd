@@ -1,4 +1,4 @@
-var pool=require('../Conexion/ConexionBD');
+var pool=require('../Conexion/conexionBD');
 module.exports={
     //Registrar Menu
     mntMenu(req,res){
@@ -27,16 +27,15 @@ module.exports={
         try{
           const sql="call usp_MntMenu(?,?,?,?,?)";
         let mntMenu={
-            id:null,
-            nombre:'',
-            //tipoMenu:null,
-            ruta:'',
-            estado:req.params.estado,
-            opcion:req.params.opcion
+            idsp:0,
+            nombresp:'',
+            rutassp: '',
+            opcionsp:req.params.opcion,
+            estadosp:0
         }
-        pool.query(sql,[mntMenu.opcion,mntMenu.id,mntMenu.nombre,mntMenu.tipoMenu,mntMenu.ruta,mntMenu.estado],function(err,resp){
-            console.log(resp);
+        pool.query(sql,[mntMenu.idsp,mntMenu.nombresp,mntMenu.rutassp,mntMenu.opcionsp,mntMenu.estadosp],function(err,resp){
             if(err){
+              console.log('ingreso')
               throw err;
             }
             if(resp.length>0){
